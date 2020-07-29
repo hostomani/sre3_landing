@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    </head>
+    <body>
+        <div id="particles-js"></div>
+
+        <div class="content_wrapper">
+            <div class="logo_wrapper animate__animated animate__lightSpeedInLeft">
+                <img src="assets/img/saree3_logo.svg">
+            </div>
+            <div class="coming_soon_header">
+                سننطلق قريباََ...
+            </div>
+            <div class="coming_soon_message">
+                ترقبونا، نحن على وشك إطلاق مشروعنا الجديد قريباََ...
+            </div>
+            <div class="counter_wrapper">
+                <div class="time_unit_wrapper">
+                    <div class="top_section_wrapper">
+                        <span id="weeks"></span>
+                    </div>
+                    <div class="bottom_section_wrapper">
+                        أسبوع
+                    </div>
+                </div>
+                <div class="time_unit_wrapper">
+                    <div class="top_section_wrapper">
+                        <span id="days"></span>
+                    </div>
+                    <div class="bottom_section_wrapper">
+                        يوم
+                    </div>
+                </div>
+                <div class="time_unit_wrapper">
+                    <div class="top_section_wrapper">
+                        <span id="hours"></span>
+                    </div>
+                    <div class="bottom_section_wrapper">
+                        ساعه
+                    </div>
+                </div>
+                <div class="time_unit_wrapper">
+                    <div class="top_section_wrapper">
+                        <span id="minutes"></span>
+                    </div>
+                    <div class="bottom_section_wrapper">
+                        دقيقة
+                    </div>
+                </div>
+                <div class="time_unit_wrapper">
+                    <div class="top_section_wrapper">
+                        <span id="seconds"></span>
+                    </div>
+                    <div class="bottom_section_wrapper">
+                        ثانية
+                    </div>
+                </div>
+            </div>
+            <div class="social_links_wrapper">
+
+            </div>
+        </div>
+	<script>
+  
+var deadline = new Date("aug 09, 2020 15:37:25").getTime(); 
+
+var x = setInterval(function() { 
+
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var weeks = Math.floor((t / (1000 * 60 * 60 * 24 * 7)));
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("weeks").innerHTML =weeks ; 
+document.getElementById("days").innerHTML =days ; 
+document.getElementById("hours").innerHTML =hours; 
+document.getElementById("minutes").innerHTML = minutes; 
+document.getElementById("seconds").innerHTML =seconds; 
+if (t < 0) { 
+                clearInterval(x); 
+                document.getElementById("demo").innerHTML = "TIME UP"; 
+                document.getElementById("weeks").innerHTML ='0'; 
+                document.getElementById("days").innerHTML ='0'; 
+                document.getElementById("hours").innerHTML ='0'; 
+                document.getElementById("minutes").innerHTML ='0' ; 
+                document.getElementById("seconds").innerHTML = '0'; } 
+}, 1000); 
+</script>
+        <script src="assets/js/particles.js"></script>
+        <script src="assets/js/index.js" async defer></script>
+
+    </body>
+</html>
